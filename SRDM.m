@@ -1,15 +1,19 @@
 function [mf,rf]=SRDM(imagein)
 
+% % Test code
+% imagein =  randi([0,255],100,100);
+
+
 % load image
 greylevels=254;
 coocsize=256;
 [rowsize, colsize]=size(imagein);
 
-imagein = imagein + 1
+imagein = imagein + 1;
 
 R1=5;
 R2=R1+2;
-SRDMatrix=zeros(24,16)
+SRDMatrix=zeros(24,16);
 
 for i=4:rowsize-3
     for j=4:colsize-3
@@ -50,7 +54,14 @@ for i=4:rowsize-3
             end
         end
         %Increment1
-        SRDMatrix(countR2,countR1)=SRDMatrix(countR2,countR1)+1;
+        if countR1 ~=0 && countR2 ~=0
+            SRDMatrix(countR2,countR1)=SRDMatrix(countR2,countR1)+1;
+        end
 
     end
 end
+
+disp(SRDMatrix);
+
+
+
