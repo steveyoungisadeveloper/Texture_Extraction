@@ -1,18 +1,13 @@
-function [mf,rf]=SRDM(imagein)
+% function [someOutput]=SRDM(imagein)
 
-% % Test code
-% imagein =  randi([0,255],100,100);
+% Test code
+imagein =  randi([0,255],100,100);
 
 
 % load image
-greylevels=254;
-coocsize=256;
 [rowsize, colsize]=size(imagein);
 
 imagein = imagein + 1;
-
-R1=5;
-R2=R1+2;
 SRDMatrix=zeros(24,16);
 
 for i=4:rowsize-3
