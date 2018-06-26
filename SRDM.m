@@ -29,7 +29,7 @@ for i=4:rowsize-3
                 if imagein(m,j+3) > imagein(i,j)
                     countR2=countR2+1;
                 end
-            end 
+            end
         end
         %R1
         for m=i-2:i+2
@@ -57,6 +57,3 @@ for i=4:rowsize-3
 end
 
 disp(SRDMatrix);
-
-
-
